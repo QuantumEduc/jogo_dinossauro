@@ -1,10 +1,10 @@
-const dino = document.getElementById.apply("dino")
-const obstaculo = document.getElementById.apply("obstaculo")
-let isJumping = false
-let speed = 7 
-const acceleration = 10
-const interval = 15
-const gameAreaWidth = document.getElementById.apply("gameArea").offsetWidth 
+const dino = document.getElementById.apply("dino");
+const obstaculo = document.getElementById.apply("obstaculo");
+let isJumping = false;
+let speed = 7; 
+const acceleration = 10;
+const interval = 15;
+const gameAreaWidth = document.getElementById.apply("gameArea").offsetWidth; 
 
 function jump() {
     if (isJumping) return; 
@@ -15,6 +15,12 @@ function jump() {
         isJumping = false;
 }, 500);
 }
+
+document.addEventListener("keydown",function(event){
+    if (event.code==="Space"){
+        jump();
+    }
+});
 
 function moveObstaculo(){
     let obstaculoPos = Obscatulo.offsetLeft; 
